@@ -387,7 +387,7 @@
                     <i class="fas fa-id-card"></i> AT-TM-L-123456
                 </div>
                 <div class="user-id">
-                    <i class="fas fa-clock"></i> 6 Pending Transactions
+                    <i class="fas fa-clock"></i> 3 Pending Transactions
                 </div>
             </div>
         </header>
@@ -395,7 +395,7 @@
         <div class="summary-cards">
             <div class="summary-card">
                 <h3>Total Pending Transactions</h3>
-                <div class="value">6 Transactions</div>
+                <div class="value">3 Transactions</div>
             </div>
             <div class="summary-card">
                 <h3>Total Bitcoin Value</h3>
@@ -403,11 +403,11 @@
             </div>
             <div class="summary-card">
                 <h3>Total USDT Value</h3>
-                <div class="value">100,000 USDT</div>
+                <div class="value">3,000,100 USDT</div>
             </div>
             <div class="summary-card total-amount">
                 <h3>Total Amount in USD</h3>
-                <div class="value">36,571,386 USD</div>
+                <div class="value">28,720,484 USD</div>
             </div>
         </div>
         
@@ -415,7 +415,7 @@
             <div class="section-title">
                 <i class="fas fa-exchange-alt"></i>
                 <span>Pending Financial Transactions</span>
-                <span class="pending-count">6 Pending</span>
+                <span class="pending-count">3 Pending</span>
             </div>
             
             <div class="transactions-table">
@@ -430,6 +430,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Transaction 1: 44 BTC (equivalent to ~3.1M USD) -->
                         <tr>
                             <td>
                                 <div class="transaction-type">
@@ -440,11 +441,11 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="amount">1 <span class="currency">BTC</span></div>
+                                <div class="amount">44 <span class="currency">BTC</span></div>
                             </td>
                             <td>
-                                <div>Awaiting payment</div>
-                                <div class="details">Not paid - pending settlement</div>
+                                <div>Alternative reserve (≈ $3,100,000 USD)</div>
+                                <div class="details">Equivalent value allocation</div>
                             </td>
                             <td>
                                 <span class="status status-notpaid">Not Paid</span>
@@ -455,21 +456,22 @@
                                 </button>
                             </td>
                         </tr>
+                        <!-- Transaction 2: 29 BTC for Kurd Coin creation -->
                         <tr>
                             <td>
                                 <div class="transaction-type">
-                                    <div class="transaction-icon usdt-icon">
-                                        <i class="fas fa-coins"></i>
+                                    <div class="transaction-icon btc-icon">
+                                        <i class="fab fa-bitcoin"></i>
                                     </div>
-                                    <div>USDT</div>
+                                    <div>Bitcoin</div>
                                 </div>
                             </td>
                             <td>
-                                <div class="amount">100,000 <span class="currency">USDT</span></div>
+                                <div class="amount">29 <span class="currency">BTC</span></div>
                             </td>
                             <td>
-                                <div>Transfer pending</div>
-                                <div class="details">Not paid - awaiting funds</div>
+                                <div>Kurd Coin creation fund</div>
+                                <div class="details">Allocated for new digital currency development</div>
                             </td>
                             <td>
                                 <span class="status status-notpaid">Not Paid</span>
@@ -480,6 +482,7 @@
                                 </button>
                             </td>
                         </tr>
+                        <!-- Transaction 3: Remaining 333 BTC in Google Cloud cold server -->
                         <tr>
                             <td>
                                 <div class="transaction-type">
@@ -490,92 +493,17 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="amount">13 <span class="currency">BTC</span></div>
+                                <div class="amount">333 <span class="currency">BTC</span></div>
                             </td>
                             <td>
-                                <div>Large transaction</div>
-                                <div class="details">Not paid - awaiting confirmation</div>
+                                <div>Cold storage - Google Cloud secure vault</div>
+                                <div class="details">Long-term reserve / offline custody</div>
                             </td>
                             <td>
                                 <span class="status status-notpaid">Not Paid</span>
                             </td>
                             <td>
                                 <button class="edit-btn" data-transaction="3">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon p2p-icon">
-                                        <i class="fas fa-exchange-alt"></i>
-                                    </div>
-                                    <div>P2P with Al Rayan</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">10 <span class="currency">BTC</span></div>
-                            </td>
-                            <td>
-                                <div>10 pieces with Al Rayan</div>
-                                <div class="details">Not paid - awaiting delivery</div>
-                            </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="4">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon btc-icon">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </div>
-                                    <div>Bitcoin</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">30 <span class="currency">BTC</span></div>
-                            </td>
-                            <td>
-                                <div>Last transaction - 30 pieces</div>
-                                <div class="details">Not paid - pending broadcast</div>
-                            </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="5">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon btc-icon">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </div>
-                                    <div>Bitcoin</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">352 <span class="currency">BTC</span></div>
-                            </td>
-                            <td>
-                                <div>Bulk transfer</div>
-                                <div class="details">Not paid - awaiting funds</div>
-                            </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="6">
                                     <i class="fas fa-edit"></i> Edit Request
                                 </button>
                             </td>
