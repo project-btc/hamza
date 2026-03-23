@@ -89,16 +89,6 @@
             font-size: 28px;
         }
         
-        .summary-card.total-amount h3 {
-            color: #f0f0f0;
-        }
-        
-        .summary-card h3 {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
-        
         .summary-card .value {
             font-size: 24px;
             font-weight: bold;
@@ -124,10 +114,6 @@
             border-bottom: 2px solid #f0f0f0;
         }
         
-        .section-title i {
-            color: #2a5298;
-        }
-        
         .transactions-table {
             width: 100%;
             overflow-x: auto;
@@ -138,16 +124,13 @@
             border-collapse: collapse;
         }
         
-        thead {
-            background-color: #f8f9fa;
-        }
-        
         th {
             padding: 15px;
             text-align: left;
             color: #555;
             font-weight: 600;
             border-bottom: 2px solid #eee;
+            background-color: #f8f9fa;
         }
         
         td {
@@ -159,88 +142,23 @@
             background-color: #f9fafc;
         }
         
-        .transaction-type {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .transaction-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-        
-        .btc-icon {
-            background-color: #f7931a20;
-            color: #f7931a;
-        }
-        
-        .usdt-icon {
-            background-color: #26a17b20;
-            color: #26a17b;
-        }
-        
-        .dollar-icon {
-            background-color: #8a2be220;
-            color: #8a2be2;
-        }
-        
-        .p2p-icon {
-            background-color: #1e3c7220;
-            color: #1e3c72;
-        }
-        
-        .amount {
-            font-weight: bold;
-            font-size: 17px;
-        }
-        
-        .currency {
-            color: #777;
-            font-size: 14px;
-        }
-        
-        .status {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        
         .status-notpaid {
             background-color: #f8d7da;
             color: #721c24;
-        }
-        
-        .status-pending {
-            background-color: #fff3cd;
-            color: #856404;
-        }
-        
-        .status-waiting {
-            background-color: #cce5ff;
-            color: #004085;
-        }
-        
-        .status-search {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        
-        .status-delivery {
-            background-color: #e2e3e5;
-            color: #383d41;
-        }
-        
-        .details {
+            padding: 6px 12px;
+            border-radius: 20px;
             font-size: 14px;
-            color: #666;
+        }
+
+        .view-details-btn {
+            background: none;
+            border: none;
+            color: #2a5298;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
             margin-top: 5px;
         }
         
@@ -252,29 +170,56 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 14px;
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 7px;
         }
-        
-        .edit-btn:hover {
-            background-color: #2a5298;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(30, 60, 114, 0.2);
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
         
-        .edit-btn:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
+        .modal.active {
+            display: flex;
         }
         
-        .edit-btn.processing {
-            background-color: #ffc107;
+        .modal-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 800px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
         }
-        
+
+        .schedule-table {
+            width: 100%;
+            margin-top: 15px;
+            font-size: 13px;
+            border: 1px solid #eee;
+        }
+
+        .file-header {
+            background: #2c3e50;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -283,99 +228,6 @@
             border-top: 1px solid #eee;
             margin-top: 20px;
         }
-        
-        .pending-count {
-            background-color: #ffc107;
-            color: #333;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 14px;
-            margin-left: 10px;
-        }
-        
-        .edit-processing-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .edit-processing-modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transform: translateY(-20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .edit-processing-modal.active .modal-content {
-            transform: translateY(0);
-        }
-        
-        .modal-content i {
-            font-size: 50px;
-            color: #1e3c72;
-            margin-bottom: 20px;
-        }
-        
-        .modal-content h3 {
-            color: #1e3c72;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        .modal-content p {
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 16px;
-        }
-        
-        .close-modal-btn {
-            background-color: #1e3c72;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .close-modal-btn:hover {
-            background-color: #2a5298;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 22px;
-            }
-            
-            th, td {
-                padding: 12px 8px;
-                font-size: 14px;
-            }
-            
-            .summary-cards {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -383,30 +235,26 @@
         <header class="header">
             <h1><i class="fas fa-user-circle"></i> Financial Transactions - Mohammed Hamza</h1>
             <div class="user-info">
-                <div class="user-id">
-                    <i class="fas fa-id-card"></i> AT-TM-L-123456
-                </div>
-                <div class="user-id">
-                    <i class="fas fa-clock"></i> 3 Pending Transactions
-                </div>
+                <div class="user-id"><i class="fas fa-id-card"></i> AT-TM-L-123456</div>
+                <div class="user-id"><i class="fas fa-clock"></i> 3 Pending Transactions</div>
             </div>
         </header>
         
         <div class="summary-cards">
             <div class="summary-card">
-                <h3>Total Pending Transactions</h3>
+                <h3>Pending Items</h3>
                 <div class="value">3 Transactions</div>
             </div>
             <div class="summary-card">
-                <h3>Total Bitcoin Value</h3>
+                <h3>Total Bitcoin</h3>
                 <div class="value">406 BTC</div>
             </div>
             <div class="summary-card">
-                <h3>Total USDT Value</h3>
+                <h3>Total USDT</h3>
                 <div class="value">3,000,100 USDT</div>
             </div>
             <div class="summary-card total-amount">
-                <h3>Total Amount in USD</h3>
+                <h3>Total USD Value</h3>
                 <div class="value">28,720,484 USD</div>
             </div>
         </div>
@@ -415,98 +263,43 @@
             <div class="section-title">
                 <i class="fas fa-exchange-alt"></i>
                 <span>Pending Financial Transactions</span>
-                <span class="pending-count">3 Pending</span>
             </div>
             
             <div class="transactions-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Transaction Type</th>
+                            <th>Type</th>
                             <th>Amount</th>
                             <th>Details</th>
-                            <th>Transaction Status</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Transaction 1: 44 BTC (equivalent to ~3.1M USD) -->
                         <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon btc-icon">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </div>
-                                    <div>Bitcoin</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">44 <span class="currency">BTC</span></div>
-                            </td>
+                            <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
+                            <td><div style="font-weight:bold">44 BTC</div></td>
                             <td>
                                 <div>Alternative reserve (≈ $3,100,000 USD)</div>
-                                <div class="details">Equivalent value allocation</div>
+                                <button class="view-details-btn" onclick="toggleModal(true)">View Payment Schedule Details</button>
                             </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="1">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
+                            <td><span class="status-notpaid">Not Paid</span></td>
+                            <td><button class="edit-btn"><i class="fas fa-edit"></i> Edit</button></td>
                         </tr>
-                        <!-- Transaction 2: 29 BTC for Kurd Coin creation -->
                         <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon btc-icon">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </div>
-                                    <div>Bitcoin</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">29 <span class="currency">BTC</span></div>
-                            </td>
-                            <td>
-                                <div>Kurd Coin creation fund</div>
-                                <div class="details">Allocated for new digital currency development</div>
-                            </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="2">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
+                            <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
+                            <td><div style="font-weight:bold">29 BTC</div></td>
+                            <td>Kurd Coin creation fund</td>
+                            <td><span class="status-notpaid">Not Paid</span></td>
+                            <td><button class="edit-btn"><i class="fas fa-edit"></i> Edit</button></td>
                         </tr>
-                        <!-- Transaction 3: Remaining 333 BTC in Google Cloud cold server -->
                         <tr>
-                            <td>
-                                <div class="transaction-type">
-                                    <div class="transaction-icon btc-icon">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </div>
-                                    <div>Bitcoin</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="amount">333 <span class="currency">BTC</span></div>
-                            </td>
-                            <td>
-                                <div>Cold storage - Google Cloud secure vault</div>
-                                <div class="details">Long-term reserve / offline custody</div>
-                            </td>
-                            <td>
-                                <span class="status status-notpaid">Not Paid</span>
-                            </td>
-                            <td>
-                                <button class="edit-btn" data-transaction="3">
-                                    <i class="fas fa-edit"></i> Edit Request
-                                </button>
-                            </td>
+                            <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
+                            <td><div style="font-weight:bold">333 BTC</div></td>
+                            <td>Cold storage - Google Cloud secure vault</td>
+                            <td><span class="status-notpaid">Not Paid</span></td>
+                            <td><button class="edit-btn"><i class="fas fa-edit"></i> Edit</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -514,67 +307,89 @@
         </section>
         
         <footer class="footer">
-            <p>All data in English as required | AT-TM-L-123456 is the ID of Mohammed Hamza</p>
-            <p>Interface created on <span id="current-date"></span></p>
+            <p>AT-TM-L-123456 | Mohammed Hamza | Generated: <span id="current-date"></span></p>
         </footer>
     </div>
-    
-    <!-- Modal for edit request processing -->
-    <div class="edit-processing-modal" id="editProcessingModal">
+
+    <div class="modal" id="scheduleModal">
         <div class="modal-content">
-            <i class="fas fa-clock"></i>
-            <h3>Edit Request Submitted</h3>
-            <p id="modal-message">Waiting for editing request processing...</p>
-            <button class="close-modal-btn" id="closeModalBtn">Close</button>
+            <h2 style="color:#1e3c72; margin-bottom:10px;">Payment Distribution Schedule</h2>
+            <p style="font-size:14px; color:#666; margin-bottom:20px;">Detailed allocation for 44 BTC transaction ($3,200,000 Total)</p>
+            
+            <div class="file-header">
+                <span>payment_schedule.sol</span>
+                <span>Sub-total: $2,400,000</span>
+            </div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Release Amount</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>March 24, 2026</td>
+                        <td>$40,000</td>
+                        <td>Initial installment installment Tier 1</td>
+                    </tr>
+                    <tr>
+                        <td>March 24, 2026</td>
+                        <td>$60,000</td>
+                        <td>Initial installment installment Tier 2</td>
+                    </tr>
+                    <tr>
+                        <td>March 24, 2026</td>
+                        <td>$80,000</td>
+                        <td>Batch processing ($4,000 x 20 installments)</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>$480,000</td>
+                        <td>20% Liquidity release of $2.4M</td>
+                    </tr>
+                    <tr>
+                        <td>Thu - Sat</td>
+                        <td>$1,740,000</td>
+                        <td>Final balance completion for .sol file</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="file-header" style="background:#8a2be2;">
+                <span>payment_details.abi</span>
+                <span>Sub-total: $800,000</span>
+            </div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Release Amount</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Thursday, March 26</td>
+                        <td>$800,000</td>
+                        <td>Final ABI protocol deployment fund</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="edit-btn" style="margin-top:25px; width:100%; justify-content:center;" onclick="toggleModal(false)">Close Schedule</button>
         </div>
     </div>
 
     <script>
-        // Add current date in footer
-        const today = new Date();
-        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-        document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
-        
-        // Edit button functionality with modal
-        document.querySelectorAll('.edit-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const transactionNumber = this.getAttribute('data-transaction');
-                const transactionType = this.closest('tr').querySelector('.transaction-type div:nth-child(2)').textContent;
-                const amount = this.closest('tr').querySelector('.amount').textContent;
-                const status = this.closest('tr').querySelector('.status').textContent;
-                
-                // Disable the clicked button and change its appearance
-                this.disabled = true;
-                this.classList.add('processing');
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-                
-                // Show modal with message
-                const modal = document.getElementById('editProcessingModal');
-                const modalMessage = document.getElementById('modal-message');
-                modalMessage.textContent = `Waiting for editing request for transaction ${transactionNumber}: ${transactionType} - ${amount}`;
-                modal.classList.add('active');
-                
-                // Simulate processing time
-                setTimeout(() => {
-                    // Reset button after 3 seconds
-                    this.disabled = false;
-                    this.classList.remove('processing');
-                    this.innerHTML = '<i class="fas fa-edit"></i> Edit Request';
-                }, 3000);
-            });
-        });
-        
-        // Close modal button functionality
-        document.getElementById('closeModalBtn').addEventListener('click', function() {
-            document.getElementById('editProcessingModal').classList.remove('active');
-        });
-        
-        // Close modal when clicking outside of modal content
-        document.getElementById('editProcessingModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-            }
-        });
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US');
+        function toggleModal(show) {
+            document.getElementById('scheduleModal').classList.toggle('active', show);
+        }
+        window.onclick = function(e) {
+            if (e.target == document.getElementById('scheduleModal')) toggleModal(false);
+        }
     </script>
 </body>
 </html>
