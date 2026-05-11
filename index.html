@@ -346,17 +346,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>May 20, 2026</td>
+                        <td>July 20, 2026</td>
                         <td>272 BTC</td>
                         <td>Initial Tier 1 Liquidity Release</td>
                     </tr>
                     <tr>
-                        <td>June 15, 2026</td>
+                        <td>August 15, 2026</td>
                         <td>272 BTC</td>
                         <td>Operational Fund Deployment</td>
                     </tr>
                     <tr>
-                        <td>July 10, 2026</td>
+                        <td>September 10, 2026</td>
                         <td>272 BTC</td>
                         <td>Final Completion Phase 3</td>
                     </tr>
@@ -368,7 +368,10 @@
     </div>
 
     <script>
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US');
+        // تحديد تاريخ اليوم + شهرين للعرض في التذييل
+        const futureDate = new Date();
+        futureDate.setMonth(futureDate.getMonth() + 2);
+        document.getElementById('current-date').textContent = futureDate.toLocaleDateString('en-US');
 
         async function getBTCPrice() {
             try {
