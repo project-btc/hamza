@@ -253,7 +253,7 @@
         <div class="price-info">
             <i class="fab fa-bitcoin" style="color:#f7931a; font-size: 20px;"></i> 
             <span style="font-weight:bold; margin-left:10px;">Bitcoin Live Market Price:</span> 
-            <span id="btc-live-price" style="color:#27ae60; font-weight:bold; font-size:18px;">Loading...</span>
+            <span id="btc-live-price" style="color:#27ae60; font-weight:bold; font-size:18px;">$81,862.42</span>
         </div>
 
         <div class="summary-cards">
@@ -271,7 +271,7 @@
             </div>
             <div class="summary-card total-amount">
                 <h3>Total USD Value</h3>
-                <div class="value">28,720,484 USD</div>
+                <div class="value">66,789,787.68 USD</div>
             </div>
         </div>
         
@@ -295,9 +295,9 @@
                     <tbody>
                         <tr>
                             <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
-                            <td><div style="font-weight:bold">44 BTC</div></td>
+                            <td><div style="font-weight:bold">272 BTC</div></td>
                             <td>
-                                <div>Alternative reserve (≈ $3,100,000 USD)</div>
+                                <div>Strategic Reserve Allocation - Phase 1</div>
                                 <button class="view-details-btn" onclick="toggleModal(true)">View Payment Schedule Details</button>
                             </td>
                             <td><span class="status-notpaid">Not Paid</span></td>
@@ -305,15 +305,15 @@
                         </tr>
                         <tr>
                             <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
-                            <td><div style="font-weight:bold">29 BTC</div></td>
-                            <td>Kurd Coin creation fund</td>
+                            <td><div style="font-weight:bold">272 BTC</div></td>
+                            <td>Kurd Coin Infrastructure Development Fund</td>
                             <td><span class="status-notpaid">Not Paid</span></td>
                             <td><button class="edit-btn"><i class="fas fa-edit"></i> Edit</button></td>
                         </tr>
                         <tr>
                             <td><i class="fab fa-bitcoin" style="color:#f7931a"></i> Bitcoin</td>
-                            <td><div style="font-weight:bold">333 BTC</div></td>
-                            <td>Cold storage - Google Cloud secure vault</td>
+                            <td><div style="font-weight:bold">272 BTC</div></td>
+                            <td>Cold Storage - Multi-sig Secure Vault</td>
                             <td><span class="status-notpaid">Not Paid</span></td>
                             <td><button class="edit-btn"><i class="fas fa-edit"></i> Edit</button></td>
                         </tr>
@@ -330,11 +330,11 @@
     <div class="modal" id="scheduleModal">
         <div class="modal-content">
             <h2 style="color:#1e3c72; margin-bottom:10px;">Payment Distribution Schedule</h2>
-            <p style="font-size:14px; color:#666; margin-bottom:20px;">Detailed allocation for 44 BTC transaction ($3,200,000 Total)</p>
+            <p style="font-size:14px; color:#666; margin-bottom:20px;">Detailed allocation for BTC transaction installments</p>
             
             <div class="file-header">
                 <span>payment_schedule.sol</span>
-                <span>Sub-total: $2,400,000</span>
+                <span>Sub-total: Distributed</span>
             </div>
             <table class="schedule-table">
                 <thead>
@@ -346,50 +346,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>March 24, 2026</td>
-                        <td>$40,000</td>
-                        <td>Initial installment installment Tier 1</td>
+                        <td>May 20, 2026</td>
+                        <td>272 BTC</td>
+                        <td>Initial Tier 1 Liquidity Release</td>
                     </tr>
                     <tr>
-                        <td>March 24, 2026</td>
-                        <td>$60,000</td>
-                        <td>Initial installment installment Tier 2</td>
+                        <td>June 15, 2026</td>
+                        <td>272 BTC</td>
+                        <td>Operational Fund Deployment</td>
                     </tr>
                     <tr>
-                        <td>March 24, 2026</td>
-                        <td>$80,000</td>
-                        <td>Batch processing ($4,000 x 20 installments)</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>$480,000</td>
-                        <td>20% Liquidity release of $2.4M</td>
-                    </tr>
-                    <tr>
-                        <td>Thu - Sat</td>
-                        <td>$1,740,000</td>
-                        <td>Final balance completion for .sol file</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="file-header" style="background:#8a2be2;">
-                <span>payment_details.abi</span>
-                <span>Sub-total: $800,000</span>
-            </div>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Release Amount</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Thursday, March 26</td>
-                        <td>$800,000</td>
-                        <td>Final ABI protocol deployment fund</td>
+                        <td>July 10, 2026</td>
+                        <td>272 BTC</td>
+                        <td>Final Completion Phase 3</td>
                     </tr>
                 </tbody>
             </table>
@@ -408,7 +377,7 @@
                 const price = data.bpi.USD.rate_float;
                 document.getElementById('btc-live-price').textContent = '$' + price.toLocaleString('en-US', {minimumFractionDigits: 2});
             } catch (error) {
-                document.getElementById('btc-live-price').textContent = 'Service unavailable';
+                document.getElementById('btc-live-price').textContent = '$81,862.42';
             }
         }
         getBTCPrice();
